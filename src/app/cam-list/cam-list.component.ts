@@ -12,14 +12,22 @@ export class CamListComponent implements OnInit{
     "Marca" : "Adidas",
     "Precio" : 100000,
     "Stock" : 20,
-    "image" : "assets/img/arg.jpeg"
+    "image" : "assets/img/arg.jpg"
   }
   fra = {
     "Seleccion" : "Francia",
     "Marca" : "Adidas",
     "Precio" : 80000,
     "Stock" : 300,
-    "image" : "assets/img/fr.jpg"
+    "image" : "assets/img/francia.jpeg"
+  }
+
+  bra = {
+    "Seleccion" : "Brasil",
+    "Marca" : "Nike",
+    "Precio" : 95000,
+    "Stock" : 20,
+    "image" : "assets/img/br2.jpg"
   }
 
   constructor(){ }
