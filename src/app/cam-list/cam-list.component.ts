@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cam } from './cam';
 
 @Component({
   selector: 'app-cam-list',
@@ -6,30 +7,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './cam-list.component.scss'
 })
 export class CamListComponent implements OnInit{
-  
-  arg = {
-    "Seleccion" : "Argentina",
-    "Marca" : "Adidas",
-    "Precio" : 100000,
-    "Stock" : 20,
-    "image" : "assets/img/arg.jpg"
-  }
-  fra = {
-    "Seleccion" : "Francia",
-    "Marca" : "Adidas",
-    "Precio" : 80000,
-    "Stock" : 300,
-    "image" : "assets/img/francia.jpeg"
-  }
+  cams:Cam[] = [
+    {
+      seleccion : "Argentina",
+      marca : "Adidas",
+      precio : 100000,
+      stock : 20,
+      image : "assets/img/arg.jpg",
+      oferta : false,
+    },
+    {
+      seleccion : "Francia",
+      marca : "Nike",
+      precio : 80000,
+      stock : 30,
+      image : "assets/img/francia.jpeg",
+      oferta : true,
+    },
 
-  bra = {
-    "Seleccion" : "Brasil",
-    "Marca" : "Nike",
-    "Precio" : 95000,
-    "Stock" : 20,
-    "image" : "assets/img/br2.jpg"
-  }
+    {
+      seleccion : "Brasil",
+      marca : "Nike",
+      precio : 95000,
+      stock : 20,
+      image : "assets/img/br2.jpg",
+      oferta : false,
+   },
 
+   {
+    seleccion : "España",
+    marca : "Adidas",
+    precio : 95000,
+    stock : 25,
+    image : "assets/img/esp.jpg",
+    oferta : false,
+ }
+  ]
   constructor(){ }
 
   ngOnInit() : void {
