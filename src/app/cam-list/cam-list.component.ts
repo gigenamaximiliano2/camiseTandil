@@ -53,13 +53,5 @@ export class CamListComponent implements OnInit{
     console.log('El componente ha sido inicializado');
   }
 
-  incrementar(cam : Cam) : void {
-    if(cam.cantidad < cam.stock)
-    cam.cantidad ++;
-  }
-
-  decrementar(cam : Cam) : void {
-    if(cam.cantidad > 0)
-    cam.cantidad --;
-  }
+ 
 }

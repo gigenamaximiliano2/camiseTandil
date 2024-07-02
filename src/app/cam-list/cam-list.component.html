@@ -18,17 +18,7 @@
             <td>{{cam.precio | currency}}</td>
             <td><span class = "badge text-bg-warning" *ngIf="cam.stock == 0"> Agotada</span></td>
             <td>
-                <div class="input-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-primary" (click) = 'decrementar(cam)'>-</button>
-                        </div>
-                        <input type="text" [(ngModel)]="cam.cantidad">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" (click) = 'incrementar(cam)'>+</button>
-                        </div>
-                    </div>
-                </div>
+               <app-input-integer [(cantidad)]= 'cam.cantidad' [max]="cam.stock" *ngIf="cam.stock"></app-input-integer>
             </td>    
         </tr>
        
