@@ -5,4 +5,5 @@ export interface Cam{
     stock : number;
     image : string;
     oferta : boolean;
+    cantidad : number;
 }

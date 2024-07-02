@@ -15,6 +15,7 @@ export class CamListComponent implements OnInit{
       stock : 20,
       image : "assets/img/arg.jpg",
       oferta : false,
+      cantidad : 0,
     },
     {
       seleccion : "Francia",
@@ -23,15 +24,17 @@ export class CamListComponent implements OnInit{
       stock : 30,
       image : "assets/img/francia.jpeg",
       oferta : true,
+      cantidad : 0,
     },
 
     {
       seleccion : "Brasil",
       marca : "Nike",
       precio : 95000,
-      stock : 20,
+      stock : 0,
       image : "assets/img/br2.jpg",
       oferta : false,
+      cantidad : 0,
    },
 
    {
@@ -41,11 +44,22 @@ export class CamListComponent implements OnInit{
     stock : 25,
     image : "assets/img/esp.jpg",
     oferta : false,
+    cantidad : 0,
  }
   ]
   constructor(){ }
 
   ngOnInit() : void {
     console.log('El componente ha sido inicializado');
+  }
+
+  incrementar(cam : Cam) : void {
+    if(cam.cantidad < cam.stock)
+    cam.cantidad ++;
+  }
+
+  decrementar(cam : Cam) : void {
+    if(cam.cantidad > 0)
+    cam.cantidad --;
   }
 }

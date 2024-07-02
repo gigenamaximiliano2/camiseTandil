@@ -1,5 +1,5 @@
-<h1>Camisetas</h1>
-<table class="table table-bordered">
+<h3>Camisetas</h3>
+<table class="table tex-center">
     <thead>
         <tr>
             <th>Imagen</th>
@@ -7,15 +7,29 @@
             <th>Marca</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
         <tr  *ngFor="let cam of cams" [ngClass] = "{'oferta' : cam.oferta}">
-            <td><img [src]="cam.image" [alt]="cam.seleccion"/></td>
+            <td><img width="90" class="img-tumbnail" [src]="cam.image" [alt]="cam.seleccion"/></td>
             <td>{{cam.seleccion}}</td>
             <td>{{cam.marca}}</td>
             <td>{{cam.precio | currency}}</td>
             <td><span class = "badge text-bg-warning" *ngIf="cam.stock == 0"> Agotada</span></td>
+            <td>
+                <div class="input-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary" (click) = 'decrementar(cam)'>-</button>
+                        </div>
+                        <input type="text" [(ngModel)]="cam.cantidad">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" (click) = 'incrementar(cam)'>+</button>
+                        </div>
+                    </div>
+                </div>
+            </td>    
         </tr>
        
     </tbody>

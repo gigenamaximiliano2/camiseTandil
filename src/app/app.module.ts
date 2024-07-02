@@ -5,14 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CamListComponent } from './cam-list/cam-list.component';
 
+import { FormsModule } from '@angular/forms';
+import { CamAboutComponent } from './cam-about/cam-about.component';
+import { CamCamTandilComponent } from './cam-cam-tandil/cam-cam-tandil.component';
+import { CarritoComponent } from './carrito/carrito.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    CamListComponent
+    CamListComponent,
+    CamAboutComponent,
+    CamCamTandilComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
