@@ -6,11 +6,16 @@ import { CamAboutComponent } from './cam-about/cam-about.component';
 
 const routes: Routes = [
   {
-    path: 'cams',
+    path: '',
+    redirectTo: 'portada',
+    pathMatch: 'full'
+  },
+  {
+    path: 'portada',
     component: CamCamTandilComponent
   },
   {
-    path: 'about',
+    path: 'nosotros',
     component: CamAboutComponent
   },
 ];
