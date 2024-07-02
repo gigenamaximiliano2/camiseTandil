@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cam } from './cam';
+import { CarritoCamService } from '../carrito-cam.service';
 
 @Component({
   selector: 'app-cam-list',
@@ -47,10 +48,14 @@ export class CamListComponent implements OnInit{
     cantidad : 0,
  }
   ]
-  constructor(){ }
+  constructor(private carrito : CarritoCamService){ }
 
   ngOnInit() : void {
     console.log('El componente ha sido inicializado');
+  }
+
+  AgregarAlCarrito(cam: Cam):void{
+    this.carrito.AgregarAlCarrito(cam)
   }
 
  

@@ -19,6 +19,7 @@
             <td><span class = "badge text-bg-warning" *ngIf="cam.stock == 0"> Agotada</span></td>
             <td>
                <app-input-integer [(cantidad)]= 'cam.cantidad' [max]="cam.stock" *ngIf="cam.stock"></app-input-integer>
+               <button class ="btn "(click)="AgregarAlCarrito(cam)">Agregar al Carrito</button>
             </td>    
         </tr>
        

@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CarritoCamService } from '../carrito-cam.service';
 
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.scss'
 })
-export class CarritoComponent {
+export class CarritoComponent implements OnInit {
+  constructor(private carrito: CarritoCamService){ }
+  
+  ngOnInit(): void {
+    
+  }
 
 }
