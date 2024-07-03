@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoCamService } from '../carrito-cam.service';
+import { Cam } from '../cam-list/cam';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-carrito',
@@ -7,8 +9,12 @@ import { CarritoCamService } from '../carrito-cam.service';
   styleUrl: './carrito.component.scss'
 })
 export class CarritoComponent implements OnInit {
-  constructor(private carrito: CarritoCamService){ }
-  
+
+  listaCarro$ : Observable<Cam[]> | undefined ;
+  constructor(private carrito: CarritoCamService){
+    this.listaCarro$ = carrito.listaCarro.asObservable() ;
+   }
+
   ngOnInit(): void {
     
   }

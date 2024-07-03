@@ -55,7 +55,9 @@ export class CamListComponent implements OnInit{
   }
 
   AgregarAlCarrito(cam: Cam):void{
-    this.carrito.AgregarAlCarrito(cam)
+    this.carrito.AgregarAlCarrito(cam);
+    cam.stock-= cam.cantidad;
+    cam.cantidad = 0;
   }
 
  
