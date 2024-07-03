@@ -1,27 +1,32 @@
-# CamiseTandil
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+# Proyecto de Venta de Camisetas - CamiseTandil
 
-## Development server
+## Descripción del Proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El proyecto consiste en desarrollar una aplicación web utilizando el framework Angular para la venta de camisetas de selecciones nacionales. Los usuarios pueden elegir entre una variedad de camisetas de diferentes selecciones como Argentina, Brasil, Francia, Alemania y España, y agregar las camisetas deseadas a un carrito de compras.
 
-## Code scaffolding
+La aplicación se ha estructurado de acuerdo a los requerimientos mínimos del proyecto, utilizando buenas prácticas de Angular y tecnologías modernas para asegurar una experiencia de usuario fluida y eficiente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requerimientos Técnicos
 
-## Build
+- **Ruteo:** La aplicación implementa al menos dos secciones diferentes, cada una con su propia ruta.
+- **Componentes:** Se ha creado al menos una página que incluye al menos dos componentes distintos.
+- **Interfaces:** Se utilizan interfaces para tipar los datos dentro de la aplicación.
+- **Directivas o Control de Flujo:** Se emplean estructuras de control `*ngFor` y `*ngIf` en las plantillas HTML para controlar el flujo de la renderización.
+- **Comunicación entre Componentes:** Se ha implementado comunicación entre componentes mediante el uso de `@Input`/`@Output` y un servicio compartido.
+- **Servicios:** La aplicación incluye al menos un servicio que se utiliza para la comunicación entre componentes, consumir una API externa o contener lógica de negocio aislada.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Datos del Estudiante
 
-## Running unit tests
+- **Nombre y Apellido:** Maximiliano Nicolas Gigena
+- **DNI:** 33356983
+- **Email:** gigenamaximiliano2@gmail.com
+- **Sede:** Tandil
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Enlace a StackBlitz
 
-## Further help
+El proyecto está disponible en StackBlitz para su edición y visualización. Puedes acceder al proyecto mediante el siguiente enlace:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[Editar Proyecto en StackBlitz](https://stackblitz.com/~/github.com/gigenamaximiliano2/camiseTandil)
